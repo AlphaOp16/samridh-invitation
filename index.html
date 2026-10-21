@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Samriddh & Khushi · Shubh Vivah</title>
-<meta name="description" content="Samriddh Singh & Khushi Singh invite you to their wedding celebrations in Azamgarh. Tap to open your invitation.">
-<meta property="og:title" content="Samriddh & Khushi · Shubh Vivah">
+<title>Samridh & Khushi · Shubh Vivah</title>
+<meta name="description" content="Samridh Singh & Khushi Singh invite you to their wedding celebrations in Azamgarh. Tap to open your invitation.">
+<meta property="og:title" content="Samridh & Khushi · Shubh Vivah">
 <meta property="og:description" content="You're invited! Haldi, Sangeet & Wedding · 20–21 November · Azamgarh. Tap to open and scratch to reveal the dates.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0c3634">
@@ -282,7 +282,7 @@ section{padding:64px 28px;text-align:center}
 
 <!-- ============ COVER ============ -->
 <div class="cover" id="cover">
-  <div class="doors" id="doors" role="button" tabindex="0" aria-label="Samriddh and Khushi — tap to open the invitation">
+  <div class="doors" id="doors" role="button" tabindex="0" aria-label="Samridh and Khushi — tap to open the invitation">
     <div class="door l">
       <svg class="arch" viewBox="0 0 100 400" preserveAspectRatio="none" fill="none" stroke="currentColor"><path vector-effect="non-scaling-stroke" d="M2 398 V90 C2 50 30 30 50 8 C70 30 98 50 98 90 V398 Z" opacity=".75"/><path class="pk" vector-effect="non-scaling-stroke" d="M8 392 V94 C8 58 34 40 50 20 C66 40 92 58 92 94 V392 Z" stroke="currentColor" opacity=".45"/></svg>
       <div class="bell"><svg viewBox="0 0 18 40"><use href="#bell"/></svg></div>
@@ -334,7 +334,7 @@ section{padding:64px 28px;text-align:center}
       <div class="invk">You are invited</div>
       <p class="req">With the blessings of the Almighty and our elders, we joyfully invite you to celebrate the wedding of</p>
       <h1 class="names">
-        <span class="n">Samriddh</span>
+        <span class="n">Samridh</span>
         <span class="sur">Singh</span>
         <span class="par">Son of <b>Late Smt. Prabha Singh</b><br>&amp; <b>Shri Pradeep Kumar Singh</b></span>
         <span class="with">with</span>
@@ -380,12 +380,12 @@ section{padding:64px 28px;text-align:center}
 
   <section class="footer">
     <h2 class="title reveal">See you there</h2>
-    <p class="lead reveal">Samriddh &amp; Khushi</p>
+    <p class="lead reveal">Samridh &amp; Khushi</p>
     <button class="btn reveal" id="share">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
       Share invite
     </button>
-    <div class="reveal"><span class="hash" lang="hi">#Samriddh की ख़ुशी</span></div>
+    <div class="reveal"><span class="hash" lang="hi">#Samridh की ख़ुशी</span></div>
   </section>
 </main>
 
@@ -397,7 +397,7 @@ section{padding:64px 28px;text-align:center}
 /* ================== EDIT DETAILS HERE ================== */
 const RESIDENCE_MAP = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Nai Basti Raidopur Colony, Behind Suraj Talkies, Azamgarh");
 const CONFIG = {
-  couple: "Samriddh & Khushi",
+  couple: "Samridh & Khushi",
   music: "music.mp3",                          // plays after the doors open; "" = no music
   musicVolume: 0.7,
   weddingStart: "2026-11-21T00:00:00+05:30",   // countdown target (wedding day)
@@ -459,7 +459,7 @@ function gcal(ev){
   const loc = ev.venue + (ev.address ? ", " + ev.address.replace(/<br>/g," ") : "");
   const p = new URLSearchParams({action:"TEMPLATE",text:`${CONFIG.couple} — ${ev.name}`,
     dates: ev.start ? utcRange(ev) : `${y}${pad(m)}${pad(d)}/${nx.getUTCFullYear()}${pad(nx.getUTCMonth()+1)}${pad(nx.getUTCDate())}`,
-    location:loc, details:`${ev.name} — Samriddh Singh & Khushi Singh.${ev.time?" "+ev.time+".":""}${ev.dress?" Dress code: "+ev.dress+(ev.dressSub?" ("+ev.dressSub+")":"")+".":""} Directions: ${ev.mapLink}`});
+    location:loc, details:`${ev.name} — Samridh Singh & Khushi Singh.${ev.time?" "+ev.time+".":""}${ev.dress?" Dress code: "+ev.dress+(ev.dressSub?" ("+ev.dressSub+")":"")+".":""} Directions: ${ev.mapLink}`});
   return "https://calendar.google.com/calendar/render?" + p;
 }
 $("#event-list").innerHTML = CONFIG.events.map(ev => {
@@ -666,7 +666,7 @@ document.addEventListener("visibilitychange", () => { if (audio && document.hidd
 
 // Share
 $("#share").addEventListener("click", async () => {
-  const data = { title: "Samriddh & Khushi · Shubh Vivah", text: "You're invited to Samriddh & Khushi's wedding celebrations — Haldi, Sangeet & Wedding, 20–21 Nov, Azamgarh! Open the invite and scratch to reveal the dates 🙏 #Samriddhकीख़ुशी", url: location.href };
+  const data = { title: "Samridh & Khushi · Shubh Vivah", text: "You're invited to Samridh & Khushi's wedding celebrations — Haldi, Sangeet & Wedding, 20–21 Nov, Azamgarh! Open the invite and scratch to reveal the dates 🙏 #Samridhकीख़ुशी", url: location.href };
   if (navigator.share) { try { await navigator.share(data); } catch(e){} }
   else window.open("https://wa.me/?text=" + encodeURIComponent(data.text + " " + data.url), "_blank");
 });
